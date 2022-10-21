@@ -1,0 +1,19 @@
+apiVersion: cicstx.ibm.com/v1
+kind: CICSTXApplication
+metadata:
+  name: cicstx-replicas
+spec:
+  license: 'accept'
+  replicas: 1 
+  applicationImage: 'image-registry.openshift-image-registry.svc:5000/trial/adv:latest'
+  imagePullPolicy: IfNotPresent
+  createAppDefinition: true
+  monitoring:
+    labels :
+      env: production
+    endpoints:
+    - port: metrics
+  storage:
+    size : 1Gi
+    storageClassName: nfs-storage-provisioner
+

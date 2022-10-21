@@ -1,0 +1,27 @@
+apiVersion: cicstx.ibm.com/v1
+kind: CICSTXApplication
+metadata:
+  name: cicstx-replicas
+spec:
+  license: 'accept'
+  replicas: 1
+  createAppDefinition: true
+  monitoring:
+    labels :
+      env: production
+    endpoints:
+    - port: metrics
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cicstx-replicas
+spec:
+  license: 'accept'
+  replicas: 1
+status: 
+  #status: true
+  #type: Reconciled
+  replicas: 1
+  readyReplicas: 1
+  #updatedReplicas: 1

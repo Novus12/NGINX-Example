@@ -1,0 +1,24 @@
+{
+   "name": "",
+   "tests": 1,
+   "failures": 0,
+   "time": "11.566",
+   "testsuite": [
+     {
+       "tests": 1,
+       "failures": 0,
+       "timestamp": "2022-10-21T20:01:27.2970555+05:30",
+       "time": "9.682",
+       "name": "./tests/e2e/",
+       "testcase": [
+         {
+           "classname": "e2e",
+           "name": "example-test",
+           "timestamp": "2022-10-21T20:01:27.3633566+05:30",
+           "time": "9.616",
+           "assertions": 1
+         }
+       ]
+     }
+   ]
+ }
